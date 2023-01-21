@@ -74,6 +74,11 @@ class UserController extends Controller
         return redirect('/login')->with('success', 'Cadastro realizado com sucesso');
     }
 
+    public function logout() {
+        auth()->logout();
+        return redirect('/login')->with('success', 'Até mais! :)');
+    }
+
     public function index()
     {
         //

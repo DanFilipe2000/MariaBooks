@@ -4,9 +4,9 @@
     
         <div class="navbar-header">
 
-            <a href="/dashboard" class="bi bi-book navbar-brand d-flex mt-2">
+            <a href="/dashboard" class="navbar-brand d-flex mt-2">
 
-                <h2 width="100px">MaryBooks</h2>
+                <h2 class="bi bi-book fs-3">MariaBooks</h2>
 
             </a>
 
