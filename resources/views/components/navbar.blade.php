@@ -1,6 +1,6 @@
-<nav class="navbar fixed-top navbar-light border-bottom" style="background-color: #FF725E">
+<nav class="navbar fixed-top navbar-light border-bottom" style="background-color: #8B5E3C">
 
-    <div class="container-fluid" style="width: 900px; max-width: 100%;">
+    <div class="container-fluid" style="width: 98%; max-width: 100%;">
     
         <div class="navbar-header">
 
