@@ -2,7 +2,7 @@
     <form action="/create/book" method="POST">
         <h1 style="font-size: 25px">Adicione um livro a sua coleção:</h1>
 
-        <label for="name">Título:</label>
+        <label for="name" class="mt-3">Título:</label>
 
         <input class="form-control mb-3" name="name" type="text" placeholder="Memórias Póstumas de Brás Cubas">
 

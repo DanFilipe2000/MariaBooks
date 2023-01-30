@@ -12,9 +12,23 @@ class BookController extends Controller
         return view('dashboard');
     }
 
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $user = auth()->user();
+
+        $attributes = $request->only([
+            'title',
+            'autor',
+            'company',
+            'gender',
+            'status'
+        ]);
+
+        $attributes['user_id'] = $user->id;
+
+        Book::create($attributes);
+
+        return redirect('/dashboard')->with('success', 'Livro inserido com sucesso');
     }
 
     public function store(Request $request)
