@@ -20,7 +20,7 @@
         <div class="navbar-nav flex-row">
 
             <a href="/" class="nav-link me-3">
-                <i class="bi bi-heart-fill fs-3"></i>
+                <i class="bi bi-bookmark-fill fs-3"></i>
             </a>
 
             <a href="/logout" class="nav-link me-3">

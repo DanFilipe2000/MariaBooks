@@ -9,18 +9,22 @@ class BookController extends Controller
 {
     public function dashboard()
     {
-        return view('dashboard');
+        $user = auth()->user();
+
+        $books = Book::where('user_id', $user->id)->get();
+
+        return view('dashboard', compact('books'));
     }
 
-    public function create(Request $request)
+    public function store(Request $request)
     {
         $user = auth()->user();
 
         $attributes = $request->only([
             'title',
             'autor',
-            'company',
-            'gender',
+            'company' => 'null',
+            'gender' => 'null',
             'status'
         ]);
 
@@ -29,11 +33,6 @@ class BookController extends Controller
         Book::create($attributes);
 
         return redirect('/dashboard')->with('success', 'Livro inserido com sucesso');
-    }
-
-    public function store(Request $request)
-    {
-        //
     }
 
     public function show(Book $book)

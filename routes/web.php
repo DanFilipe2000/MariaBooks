@@ -24,7 +24,7 @@ Route::post('/signup', [UserController::class, 'signup']);
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [BookController::class, 'dashboard']);
 
-    Route::post('/create/book', [BookController::class, 'dashboard']);
+    Route::post('/create/book', [BookController::class, 'store']);
 
     Route::get('/logout', [UserController::class, 'logout']);
 });

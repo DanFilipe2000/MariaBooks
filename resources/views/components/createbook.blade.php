@@ -1,10 +1,11 @@
-<div class="d-flex justify-content-center align-items-center me-5 h-100">
-    <form action="/create/book" method="POST">
-        <h1 style="font-size: 25px">Adicione um livro a sua coleção:</h1>
+<div class="d-flex justify-content-center align-items-center me-5 h-100" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <form action="/create/book" method="post">
+        @csrf
+        <h1 style="font-size: 25px; background-color: #FFA07A; color: black; padding: 10px 20px; border-radius: 10px 10px 0 0; text-align: center;">Adicione um livro à sua coleção:</h1>
 
         <label for="name" class="mt-3">Título:</label>
 
-        <input class="form-control mb-3" name="name" type="text" placeholder="Memórias Póstumas de Brás Cubas">
+        <input class="form-control mb-3" name="title" type="text" placeholder="Memórias Póstumas de Brás Cubas">
 
         <label for="autor">Autor:</label>
 
@@ -26,6 +27,6 @@
             <option value="not-started">Nunca li</option>
         </select>
 
-        <button class="d-flex btn bi bi-plus-circle-fill fs-3" type="submit" style="color: #228B22;  border-radius: 100%; padding: 0px; margin-left: 90%"></button>
+        <button class="btn btn-success" type="submit" style="margin-left: 77%;">Adicionar</button>
     </form>
 </div>
